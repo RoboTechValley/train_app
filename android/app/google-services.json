@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "739308588337",
+    "firebase_url": "https://train-a73e6-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "train-a73e6",
+    "storage_bucket": "train-a73e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739308588337:android:c83ee690e465b09732f410",
+        "android_client_info": {
+          "package_name": "com.gpstracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHjVbm4367wziQxeejb2gOt8WaarZ2oTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
