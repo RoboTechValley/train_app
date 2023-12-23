@@ -1,37 +1,27 @@
 {
   "project_info": {
-    "project_number": "544757091900",
-    "firebase_url": "https://soil-848b1-default-rtdb.firebaseio.com",
-    "project_id": "soil-848b1",
-    "storage_bucket": "soil-848b1.appspot.com"
+    "project_number": "736737602796",
+    "firebase_url": "https://smart-bio-floc-4150e-default-rtdb.firebaseio.com",
+    "project_id": "smart-bio-floc-4150e",
+    "storage_bucket": "smart-bio-floc-4150e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:544757091900:android:39a14c4bf05080a96a7d39",
+        "mobilesdk_app_id": "1:736737602796:android:24789458e67596f74c89c9",
         "android_client_info": {
-          "package_name": "com.soil"
+          "package_name": "com.bioflock"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "544757091900-q6498b62fvl2r09l9sdji0t33sloasr4.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC1l4H6QcBm7XTyTnPXsszPCG2ab9cLlHw"
+          "current_key": "AIzaSyDmQLw4HBPTAL-xaH6LqYT52KAKwyZMupM"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "544757091900-q6498b62fvl2r09l9sdji0t33sloasr4.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

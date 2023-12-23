@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import database from '@react-native-firebase/database';
 
 const App = () => {
   const [data, setdata] = useState([]);
+  const [imageUrlds, setimageUrlds] = useState('https://robotechvalleycom/app/tds.jpeg');
   useEffect(() => {
     database()
-    .ref('/')
+    .ref('/users/BUBT')
     .on('value', snapshot => {
       console.log('User data: ', snapshot.val());
       setdata(snapshot.val())
@@ -14,19 +15,25 @@ const App = () => {
   }, []);
   return (
     <View style={{flex:1}}>
-      <Text style={{textAlign:'center', color:'#000',fontSize:19,fontWeight:'bold',paddingTop:50}}>Realtime Soil Data</Text>
+      <Text style={{textAlign:'center', color:'#000',fontSize:19,fontWeight:'bold',paddingTop:50}}>SMART BIOFLOCK</Text>
+      <Image style={{height:200, width:'100%',marginTop:10}} resizeMode='contain' source={require('./Images/tds.jpeg')} />
+      <Text style={{textAlign:'center', color:'gray'}}>Standard TDS Chart</Text>
       <View style={styles.container}>
         <View style={styles.box}>
           <Text style={styles.heading}>PH</Text>
-          <Text style={styles.value}>3.30</Text>
+          <Text style={styles.value}>{data?.ph}</Text>
         </View>
         <View style={styles.box}>
-          <Text style={styles.heading}>Moisture</Text>
-          <Text style={styles.value}>0</Text>
+          <Text style={styles.heading}>TDS</Text>
+          <Text style={styles.value}>{data?.tds}</Text>
         </View>
         <View style={styles.box}>
           <Text style={styles.heading}>Water Level</Text>
-          <Text style={styles.value}>100</Text>
+          <Text style={styles.value}>{data?.waterLevel}</Text>
+        </View>
+        <View style={styles.box}>
+          <Text style={styles.heading}>Temp</Text>
+          <Text style={styles.value}>{data?.temperature}</Text>
         </View>
     </View>
     </View>
@@ -38,8 +45,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    marginTop: -20,
+    marginTop: 20,
     flex:1,
+    flexWrap:'wrap'
   },
   box: {
     alignItems: 'center',
@@ -48,7 +56,8 @@ const styles = StyleSheet.create({
     padding: 10,
     width:'30%',
     borderRadius:4,
-    backgroundColor:'#fff'
+    backgroundColor:'#fff',
+    marginBottom:10
   },
   heading: {
     fontSize: 14,
